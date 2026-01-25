@@ -1,7 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import {
+  SalesRevenueDashboard,
+  MarketingPerformanceDashboard,
+  InvestmentTrendsDashboard,
+} from "@/components/Dashboards";
 
 /**
  * Design System: Modern Technical Authority
@@ -9,10 +14,12 @@ import { useState } from "react";
  * - Indigo-to-purple gradient accents
  * - Smooth animations and micro-interactions
  * - Technical elements (code, tools, metrics) prominently featured
+ * - Interactive dashboards showcasing analytical skills
  */
 
 export default function Home() {
   const [expandedExperience, setExpandedExperience] = useState<string | null>(null);
+  const [activeDashboard, setActiveDashboard] = useState<"sales" | "marketing" | "investment">("sales");
 
   const experiences = [
     {
@@ -125,6 +132,7 @@ export default function Home() {
           </div>
           <div className="flex gap-6 items-center">
             <a href="#experience" className="text-sm hover:text-accent transition-colors">Experience</a>
+            <a href="#dashboards" className="text-sm hover:text-accent transition-colors">Dashboards</a>
             <a href="#skills" className="text-sm hover:text-accent transition-colors">Skills</a>
             <a href="#projects" className="text-sm hover:text-accent transition-colors">Projects</a>
             <a href="#contact" className="text-sm hover:text-accent transition-colors">Contact</a>
@@ -163,15 +171,15 @@ export default function Home() {
 
               {/* Key Metrics */}
               <div className="grid grid-cols-3 gap-4 pt-4">
-                <div className="bg-white/60 backdrop-blur rounded-lg p-4 border border-indigo-200">
+                <div className="bg-white/60 backdrop-blur rounded-lg p-4 border border-indigo-200 hover:shadow-lg transition-all">
                   <div className="text-2xl font-bold text-indigo-600">5+</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
-                <div className="bg-white/60 backdrop-blur rounded-lg p-4 border border-purple-200">
+                <div className="bg-white/60 backdrop-blur rounded-lg p-4 border border-purple-200 hover:shadow-lg transition-all">
                   <div className="text-2xl font-bold text-purple-600">160+</div>
                   <div className="text-sm text-muted-foreground">Countries Managed</div>
                 </div>
-                <div className="bg-white/60 backdrop-blur rounded-lg p-4 border border-indigo-200">
+                <div className="bg-white/60 backdrop-blur rounded-lg p-4 border border-indigo-200 hover:shadow-lg transition-all">
                   <div className="text-2xl font-bold text-indigo-600">$2M+</div>
                   <div className="text-sm text-muted-foreground">Cost Savings</div>
                 </div>
@@ -210,6 +218,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Dashboards Section */}
+      <section id="dashboards" className="py-20 bg-gradient-to-b from-secondary/50 to-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4 mb-12">
+            <h2 className="text-4xl font-bold text-foreground">Interactive Analytics Dashboards</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full"></div>
+            <p className="text-lg text-muted-foreground">
+              Explore interactive dashboards showcasing real-world data analysis and visualization skills. Built with Kaggle datasets to demonstrate proficiency in data interpretation and business insights.
+            </p>
+          </div>
+
+          {/* Dashboard Selector */}
+          <div className="flex gap-3 mb-8 flex-wrap">
+            <Button
+              onClick={() => setActiveDashboard("sales")}
+              className={`transition-all ${
+                activeDashboard === "sales"
+                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+                  : "bg-secondary text-foreground hover:bg-secondary/80"
+              }`}
+            >
+              Sales & Revenue
+            </Button>
+            <Button
+              onClick={() => setActiveDashboard("marketing")}
+              className={`transition-all ${
+                activeDashboard === "marketing"
+                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+                  : "bg-secondary text-foreground hover:bg-secondary/80"
+              }`}
+            >
+              Marketing Performance
+            </Button>
+            <Button
+              onClick={() => setActiveDashboard("investment")}
+              className={`transition-all ${
+                activeDashboard === "investment"
+                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+                  : "bg-secondary text-foreground hover:bg-secondary/80"
+              }`}
+            >
+              Investment Trends
+            </Button>
+          </div>
+
+          {/* Dashboard Content */}
+          <div className="bg-white rounded-lg shadow-lg p-8 border border-border">
+            {activeDashboard === "sales" && <SalesRevenueDashboard />}
+            {activeDashboard === "marketing" && <MarketingPerformanceDashboard />}
+            {activeDashboard === "investment" && <InvestmentTrendsDashboard />}
+          </div>
+
+          {/* Dashboard Info */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <Card className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 border-indigo-200">
+              <h3 className="font-bold text-foreground mb-2">Sales & Revenue</h3>
+              <p className="text-sm text-muted-foreground">E-commerce dataset analysis showing revenue trends, product performance, and order metrics.</p>
+            </Card>
+            <Card className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200">
+              <h3 className="font-bold text-foreground mb-2">Marketing Performance</h3>
+              <p className="text-sm text-muted-foreground">Multi-platform ad campaign analysis with ROI metrics and spend efficiency insights.</p>
+            </Card>
+            <Card className="p-6 bg-gradient-to-br from-pink-50 to-red-50 border-pink-200">
+              <h3 className="font-bold text-foreground mb-2">Investment Trends</h3>
+              <p className="text-sm text-muted-foreground">Startup funding analysis by stage and year, showing market trends and investment patterns.</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Experience Section */}
       <section id="experience" className="py-20 bg-secondary/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -234,6 +312,7 @@ export default function Home() {
                     </div>
                     <div className="text-right">
                       <p className="text-sm text-muted-foreground">{exp.description}</p>
+                      <ChevronDown className={`w-5 h-5 text-indigo-600 mt-2 transition-transform ${expandedExperience === exp.id ? 'rotate-180' : ''}`} />
                     </div>
                   </div>
 
