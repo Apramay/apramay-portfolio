@@ -187,12 +187,12 @@ export default function Home() {
 
               {/* CTA Buttons */}
               <div className="flex gap-4 pt-4">
-                <Button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">
-                  View Resume <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-                <Button variant="outline" className="border-indigo-300 text-indigo-600 hover:bg-indigo-50">
+                <a href="/files/Apramay-Gyan-Resume.pdf" download className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all">
+                  View Resume <ArrowRight className="w-4 h-4" />
+                </a>
+                <a href="#contact" className="inline-flex items-center gap-2 border-2 border-indigo-300 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold transition-all">
                   Get in Touch
-                </Button>
+                </a>
               </div>
             </div>
 
