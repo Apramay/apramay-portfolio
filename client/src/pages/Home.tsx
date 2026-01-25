@@ -185,13 +185,10 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* CTA Buttons */}
+              {/* CTA Button */}
               <div className="flex gap-4 pt-4">
-                <a href="/files/Apramay-Gyan-Resume.pdf" download className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all">
-                  View Resume <ArrowRight className="w-4 h-4" />
-                </a>
-                <a href="#contact" className="inline-flex items-center gap-2 border-2 border-indigo-300 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold transition-all">
-                  Get in Touch
+                <a href="#contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all">
+                  Get in Touch <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -232,6 +229,60 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Me Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4 mb-12">
+            <h2 className="text-4xl font-bold text-foreground">About Me</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-6">
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                I'm a data-driven analyst passionate about transforming complex business challenges into actionable insights. With an MBA from Temple University and 5+ years of experience across global organizations, I specialize in bridging the gap between technical analytics and strategic business decisions.
+              </p>
+              
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                My approach combines rigorous data analysis with clear storytelling. I've led cross-functional teams through digital transformations, built scalable analytics infrastructure, and consistently delivered insights that drive measurable business impact—from 45% adoption uplifts to $2M+ in cost savings.
+              </p>
+
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                I'm particularly drawn to roles where I can leverage advanced analytics tools (Tableau, Power BI, SQL, Python) to uncover hidden patterns, optimize processes, and empower teams with data-driven decision-making capabilities. When I'm not analyzing data, you'll find me exploring new analytics methodologies or mentoring junior analysts.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <Card className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 border-indigo-200">
+                <h3 className="font-bold text-foreground mb-4">Key Strengths</h3>
+                <ul className="space-y-2 text-sm text-foreground/80">
+                  <li className="flex items-start gap-2">
+                    <span className="text-indigo-600 font-bold mt-1">•</span>
+                    <span>Data visualization & storytelling</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-indigo-600 font-bold mt-1">•</span>
+                    <span>Cross-functional leadership</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-indigo-600 font-bold mt-1">•</span>
+                    <span>Process optimization</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-indigo-600 font-bold mt-1">•</span>
+                    <span>Requirements gathering</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-indigo-600 font-bold mt-1">•</span>
+                    <span>Stakeholder management</span>
+                  </li>
+                </ul>
+              </Card>
             </div>
           </div>
         </div>
@@ -328,6 +379,11 @@ export default function Home() {
                       <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
                       <p className="text-indigo-600 font-semibold">{exp.company}</p>
                       <p className="text-sm text-muted-foreground">{exp.location} • {exp.period}</p>
+                      {exp.company === "Jinee Inc" && (
+                        <a href="https://public.tableau.com/app/profile/apramay.gyan/vizzes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-indigo-600 hover:text-indigo-700 font-semibold text-sm">
+                          View Tableau Dashboards <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
                     </div>
                     <div className="text-right">
                       <p className="text-sm text-muted-foreground">{exp.description}</p>
