@@ -201,7 +201,7 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-2xl blur-2xl opacity-30"></div>
                 <img 
-                  src="/images/linkedin-headshot.png" 
+                  src="/images/professional-linkedin-headshot.png" 
                   alt="Apramay Gyan - Product & Business Analyst" 
                   className="relative w-80 h-auto rounded-2xl shadow-2xl border-4 border-white object-cover"
                 />
