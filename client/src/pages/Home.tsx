@@ -187,6 +187,9 @@ export default function Home() {
 
               {/* CTA Button */}
               <div className="flex gap-4 pt-4">
+                <a href="#experience" className="inline-flex items-center gap-2 bg-white text-indigo-600 border-2 border-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold transition-all">
+                  View Work <ArrowRight className="w-4 h-4" />
+                </a>
                 <a href="#contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all">
                   Get in Touch <ArrowRight className="w-4 h-4" />
                 </a>
@@ -238,7 +241,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4 mb-12">
-            <h2 className="text-4xl font-bold text-foreground">About Me</h2>
+            <h2 className="text-4xl font-bold text-foreground">The Story Behind the Data</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full"></div>
           </div>
 
