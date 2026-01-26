@@ -196,41 +196,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Visual Element */}
-            <div className="hidden lg:block">
+            {/* Right: Headshot */}
+            <div className="hidden lg:flex lg:justify-center lg:items-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-lg blur-3xl opacity-20"></div>
-                <div className="relative bg-white/80 backdrop-blur rounded-lg p-8 border border-indigo-200 space-y-6">
-                  <div>
-                    <h3 className="text-sm font-bold text-indigo-600 mb-4 uppercase tracking-wide">Core Competencies</h3>
-                    <div className="space-y-4">
-                      <div>
-                        <p className="text-xs font-semibold text-muted-foreground mb-2">Analytics & BI</p>
-                        <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-full">Tableau</span>
-                          <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-full">Power BI</span>
-                          <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-full">SQL</span>
-                        </div>
-                      </div>
-                      <div>
-                        <p className="text-xs font-semibold text-muted-foreground mb-2">Data & Databases</p>
-                        <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">Snowflake</span>
-                          <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">Python</span>
-                          <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">R</span>
-                        </div>
-                      </div>
-                      <div>
-                        <p className="text-xs font-semibold text-muted-foreground mb-2">Expertise</p>
-                        <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1 bg-pink-100 text-pink-700 text-xs font-semibold rounded-full">Product</span>
-                          <span className="px-3 py-1 bg-pink-100 text-pink-700 text-xs font-semibold rounded-full">Process</span>
-                          <span className="px-3 py-1 bg-pink-100 text-pink-700 text-xs font-semibold rounded-full">Data</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-2xl blur-2xl opacity-30"></div>
+                <img 
+                  src="/images/headshot.png" 
+                  alt="Apramay Gyan" 
+                  className="relative w-80 h-auto rounded-2xl shadow-2xl border-4 border-white object-cover"
+                />
               </div>
             </div>
           </div>
