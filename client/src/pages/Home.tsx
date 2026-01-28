@@ -198,12 +198,12 @@ export default function Home() {
 
             {/* Right: Headshot */}
             <div className="hidden lg:flex lg:justify-center lg:items-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-2xl blur-2xl opacity-30"></div>
+              <div className="relative w-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-3xl blur-3xl opacity-25"></div>
                 <img 
-                  src="/images/professional-linkedin-headshot.png" 
+                  src="/images/hero-headshot.png" 
                   alt="Apramay Gyan - Product & Business Analyst" 
-                  className="relative w-80 h-auto rounded-2xl shadow-2xl border-4 border-white object-cover"
+                  className="relative w-full h-auto rounded-3xl shadow-2xl border-4 border-white object-cover"
                 />
               </div>
             </div>
