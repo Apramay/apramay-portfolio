@@ -516,7 +516,7 @@ export default function Home() {
           </div>
 
           <div className="text-white/80 text-sm">
-            <p>Philadelphia, PA • MBA • apramaygyan.mba@gmail.com</p>
+            <p>Philadelphia, PA • Open to Relocate • apramaygyan.mba@gmail.com</p>
           </div>
         </div>
       </section>
