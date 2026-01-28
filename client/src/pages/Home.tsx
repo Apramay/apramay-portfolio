@@ -505,7 +505,7 @@ export default function Home() {
               <Mail className="w-5 h-5" />
               Email Me
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors border border-white/30">
+            <a href="https://linkedin.com/in/apramaygyan/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors border border-white/30">
               <Linkedin className="w-5 h-5" />
               LinkedIn
             </a>
